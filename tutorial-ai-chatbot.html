@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot Tutorial – Noel Codes</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      background-color: #2563eb;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #toggleTheme {
+      background: white;
+      color: #2563eb;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .code-section {
+      background-color: #f8fafc;
+      padding: 1rem;
+      border-left: 5px solid #2563eb;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+    }
+
+    .code-section pre {
+      background: #e2e8f0;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    .demo-section {
+      background-color: #f8fafc;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    #chatbox {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 1rem;
+      height: 220px;
+      overflow-y: auto;
+      margin-bottom: 1rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    #chatbox p {
+      margin: 0.5rem 0;
+      line-height: 1.4;
+    }
+
+    #chatbox strong {
+      color: #2563eb;
+    }
+
+    #userInput {
+      padding: 0.75rem 1rem;
+      width: 70%;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      outline: none;
+      margin-right: 0.5rem;
+      transition: border 0.3s ease;
+    }
+
+    #userInput:focus {
+      border-color: #2563eb;
+    }
+
+    button {
+      padding: 0.75rem 1.2rem;
+      border: none;
+      background-color: #2563eb;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+
+    .dark-mode #chatbox {
+      background-color: #1e293b;
+      color: #f8fafc;
+      border-color: #334155;
+    }
+
+    .dark-mode #userInput {
+      background-color: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #475569;
+    }
+
+    .dark-mode button {
+      background-color: #3b82f6;
+    }
+
+    .dark-mode button:hover {
+      background-color: #2563eb;
+    }
+
+    #chatbox::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #chatbox::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button id="toggleTheme">🌙 Dark Mode</button>
+  </header>
+
+  <main class="container">
+    <h1>🤖 Build a Simple AI Chatbot with JavaScript</h1>
+    <p>This tutorial teaches you how to build a basic chatbot using HTML, CSS, and JavaScript. It's a fun beginner project to understand input handling and response logic.</p>
+
+    <section class="code-section">
+      <h2>Step 1: HTML</h2>
+      <pre><code>&lt;div id="chatbox"&gt;&lt;/div&gt;
+&lt;input type="text" id="userInput" placeholder="Ask me something..." /&gt;
+&lt;button onclick="sendMessage()"&gt;Send&lt;/button&gt;</code></pre>
+    </section>
+
+    <section class="code-section">
+      <h2>Step 2: JavaScript</h2>
+      <pre><code>function sendMessage() {
+  const input = document.getElementById("userInput").value;
+  const chatbox = document.getElementById("chatbox");
+  const lower = input.toLowerCase();
+  let response = "";
+
+  if (lower.includes("hello")) {
+    response = "Hi there! 👋";
+  } else if (lower.includes("how are you")) {
+    response = "I'm just code, but I'm doing great!";
+  } else {
+    response = "Sorry, I don’t understand that.";
+  }
+
+  chatbox.innerHTML += `&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; ${input}&lt;/p&gt;`;
+
+  let botParagraph = document.createElement("p");
+  botParagraph.innerHTML = `&lt;strong&gt;Bot:&lt;/strong&gt; `;
+  chatbox.appendChild(botParagraph);
+
+  let i = 0;
+  let typing = setInterval(() => {
+    if (i < response.length) {
+      botParagraph.innerHTML += response.charAt(i);
+      i++;
+    } else {
+      clearInterval(typing);
+    }
+  }, 50);
+
+  document.getElementById("userInput").value = "";
+}</code></pre>
+    </section>
+
+    <section class="demo-section">
+      <h2>Live Demo</h2>
+      <div id="chatbox"></div>
+      <input type="text" id="userInput" placeholder="Ask me something..." />
+      <button onclick="sendMessage()">Send</button>
+    </section>
+  </main>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput").value;
+      const chatbox = document.getElementById("chatbox");
+      const lower = input.toLowerCase();
+      let response = "";
+
+      if (lower.includes("hello")) {
+        response = "Hi there! 👋";
+      } else if (lower.includes("how are you")) {
+        response = "I'm just code, but I'm doing great!";
+      } else {
+        response = "Sorry, I don’t understand that.";
+      }
+      if (lower.includes("hello")) {
+  response = "Hi there! 👋";
+} else if (lower.includes("how are you")) {
+  response = "I'm just code, but I'm doing great!";
+} else if (lower.includes("who made you")) {
+  response = "I was created by Noel at Noel Codes!";
+} else if (lower.includes("what is html")) {
+  response = "HTML is a markup language used to create webpages.";
+} else if (lower.includes("bye")) {
+  response = "Goodbye! Come back soon.";
+} else {
+  response = "Sorry, I don’t understand that.";
+}
+
+      chatbox.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+
+      let botParagraph = document.createElement("p");
+      botParagraph.innerHTML = `<strong>Bot:</strong> `;
+      chatbox.appendChild(botParagraph);
+
+      let i = 0;
+      let typing = setInterval(() => {
+        if (i < response.length) {
+          botParagraph.innerHTML += response.charAt(i);
+          i++;
+        } else {
+          clearInterval(typing);
+        }
+      }, 50);
+
+      document.getElementById("userInput").value = "";
+    }
+
+    const toggle = document.getElementById("toggleTheme");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.textContent = document.body.classList.contains("dark-mode")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+    });
+  </script>
+</body>
+</html>

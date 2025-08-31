@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS Course | Noel Codes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Noel Codes</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Lesson Content -->
+  <main class="lesson-page">
+    <div class="container">
+      <h2>HTML & CSS Course</h2>
+      <p>Welcome to your first lesson! Let’s learn how every HTML page is structured.</p>
+
+      <div class="lesson-box">
+        <h3>Lesson 1: Basic HTML Structure</h3>
+        <p>This is the basic HTML layout:</p>
+
+        <!-- Code Display -->
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <!-- Live Output -->
+        <h4>Output:</h4>
+        <iframe class="code-preview" srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;My First Page&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Hello, world!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+
+        <!-- Completion Button -->
+        <button class="btn-complete" onclick="markLessonComplete()">Mark as Complete ✅</button>
+        <p id="complete-msg" class="complete-msg"></p>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- Completion Script -->
+  <script>
+    function markLessonComplete() {
+      localStorage.setItem('lesson1_html_done', 'true');
+      document.getElementById('complete-msg').textContent = '✅ Lesson marked as complete!';
+    }
+
+    window.onload = function () {
+      if (localStorage.getItem('lesson1_html_done')) {
+        document.getElementById('complete-msg').textContent = '✅ You completed this lesson!';
+      }
+    };
+  </script>
+
+</body>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Noel Codes. Keep coding with passion!</p>
+    </div>
+  </footer>
+<div class="lesson-box">
+  <h3>Lesson 2: Headings and Paragraphs</h3>
+  <p>Headings help organize your content. Paragraphs add text content. Here's how:</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;h1&gt;This is a main heading&lt;/h1&gt;
+&lt;h2&gt;This is a subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph explaining the topic in detail.&lt;/p&gt;
+&lt;p&gt;You can add as many paragraphs as you want.&lt;/p&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="&lt;h1&gt;This is a main heading&lt;/h1&gt;&lt;h2&gt;This is a subheading&lt;/h2&gt;&lt;p&gt;This is a paragraph explaining the topic in detail.&lt;/p&gt;&lt;p&gt;You can add as many paragraphs as you want.&lt;/p&gt;"></iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLesson2Complete()">Mark as Complete ✅</button>
+  <p id="complete-msg-2" class="complete-msg"></p>
+</div>
+<script>
+  function markLessonComplete() {
+    localStorage.setItem('lesson1_html_done', 'true');
+    document.getElementById('complete-msg').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson2Complete() {
+    localStorage.setItem('lesson2_html_done', 'true');
+    document.getElementById('complete-msg-2').textContent = '✅ Lesson marked as complete!';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('lesson1_html_done')) {
+      document.getElementById('complete-msg').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson2_html_done')) {
+      document.getElementById('complete-msg-2').textContent = '✅ You completed this lesson!';
+    }
+  };
+</script>
+
+<div class="lesson-box">
+  <h3>Lesson 3: Links and Images</h3>
+  <p>Let's learn how to create links and show images using HTML.</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;a href=&quot;https://www.google.com&quot;&gt;Visit Google&lt;/a&gt;
+
+&lt;img src=&quot;https://via.placeholder.com/300x150&quot; alt=&quot;Sample Image&quot; /&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview"
+    srcdoc="&lt;a href='https://www.google.com' target='_blank'&gt;Visit Google&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;img src='https://via.placeholder.com/300x150' alt='Sample Image' /&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLesson3Complete()">Mark as Complete ✅</button>
+  <p id="complete-msg-3" class="complete-msg"></p>
+</div>
+<script>
+  function markLessonComplete() {
+    localStorage.setItem('lesson1_html_done', 'true');
+    document.getElementById('complete-msg').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson2Complete() {
+    localStorage.setItem('lesson2_html_done', 'true');
+    document.getElementById('complete-msg-2').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson3Complete() {
+    localStorage.setItem('lesson3_html_done', 'true');
+    document.getElementById('complete-msg-3').textContent = '✅ Lesson marked as complete!';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('lesson1_html_done')) {
+      document.getElementById('complete-msg').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson2_html_done')) {
+      document.getElementById('complete-msg-2').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson3_html_done')) {
+      document.getElementById('complete-msg-3').textContent = '✅ You completed this lesson!';
+    }
+  };
+</script>
+
+<div class="lesson-box">
+  <h3>Lesson 4: Lists and Tables</h3>
+  <p>Lists and tables help organize information clearly.</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;h4&gt;Unordered List:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Ordered List:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Install VS Code&lt;/li&gt;
+  &lt;li&gt;Write code&lt;/li&gt;
+  &lt;li&gt;Run browser&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4&gt;Simple Table:&lt;/h4&gt;
+&lt;table border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Noel&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Andy&lt;/td&gt;
+    &lt;td&gt;21&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;h4&gt;Unordered List:&lt;/h4&gt;
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h4&gt;Ordered List:&lt;/h4&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Install VS Code&lt;/li&gt;
+      &lt;li&gt;Write code&lt;/li&gt;
+      &lt;li&gt;Run browser&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;h4&gt;Simple Table:&lt;/h4&gt;
+    &lt;table border='1' style='border-collapse: collapse;'&gt;
+      &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Noel&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Andy&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLesson4Complete()">Mark as Complete ✅</button>
+  <p id="complete-msg-4" class="complete-msg"></p>
+</div>
+<script>
+  function markLessonComplete() {
+    localStorage.setItem('lesson1_html_done', 'true');
+    document.getElementById('complete-msg').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson2Complete() {
+    localStorage.setItem('lesson2_html_done', 'true');
+    document.getElementById('complete-msg-2').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson3Complete() {
+    localStorage.setItem('lesson3_html_done', 'true');
+    document.getElementById('complete-msg-3').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson4Complete() {
+    localStorage.setItem('lesson4_html_done', 'true');
+    document.getElementById('complete-msg-4').textContent = '✅ Lesson marked as complete!';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('lesson1_html_done')) {
+      document.getElementById('complete-msg').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson2_html_done')) {
+      document.getElementById('complete-msg-2').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson3_html_done')) {
+      document.getElementById('complete-msg-3').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson4_html_done')) {
+      document.getElementById('complete-msg-4').textContent = '✅ You completed this lesson!';
+    }
+  };
+</script>
+
+<div class="lesson-box">
+  <h3>Lesson 5: Forms in HTML</h3>
+  <p>Forms allow users to input and send data — commonly used for login, contact, or search boxes.</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;form&gt;
+  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;&lt;br&gt;
+  &lt;textarea id=&quot;message&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;form&gt;
+      &lt;label for='name'&gt;Name:&lt;/label&gt;
+      &lt;input type='text' id='name' name='name' /&gt;&lt;br&gt;&lt;br&gt;
+
+      &lt;label for='email'&gt;Email:&lt;/label&gt;
+      &lt;input type='email' id='email' name='email' /&gt;&lt;br&gt;&lt;br&gt;
+
+      &lt;label for='message'&gt;Message:&lt;/label&gt;&lt;br&gt;
+      &lt;textarea id='message' name='message'&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+      &lt;button type='submit'&gt;Send&lt;/button&gt;
+    &lt;/form&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLesson5Complete()">Mark as Complete ✅</button>
+  <p id="complete-msg-5" class="complete-msg"></p>
+</div>
+<script>
+  function markLessonComplete() {
+    localStorage.setItem('lesson1_html_done', 'true');
+    document.getElementById('complete-msg').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson2Complete() {
+    localStorage.setItem('lesson2_html_done', 'true');
+    document.getElementById('complete-msg-2').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson3Complete() {
+    localStorage.setItem('lesson3_html_done', 'true');
+    document.getElementById('complete-msg-3').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson4Complete() {
+    localStorage.setItem('lesson4_html_done', 'true');
+    document.getElementById('complete-msg-4').textContent = '✅ Lesson marked as complete!';
+  }
+
+  function markLesson5Complete() {
+    localStorage.setItem('lesson5_html_done', 'true');
+    document.getElementById('complete-msg-5').textContent = '✅ Lesson marked as complete!';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('lesson1_html_done')) {
+      document.getElementById('complete-msg').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson2_html_done')) {
+      document.getElementById('complete-msg-2').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson3_html_done')) {
+      document.getElementById('complete-msg-3').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson4_html_done')) {
+      document.getElementById('complete-msg-4').textContent = '✅ You completed this lesson!';
+    }
+    if (localStorage.getItem('lesson5_html_done')) {
+      document.getElementById('complete-msg-5').textContent = '✅ You completed this lesson!';
+    }
+  };
+</script>
+
+<div class="lesson-box">
+  <h3>Lesson 6: Semantic HTML Tags</h3>
+  <p>Semantic tags clearly describe the purpose of the content inside them, making code more readable and accessible.</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;header&gt;
+  &lt;h1&gt;Welcome to Noel Codes&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Courses&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Why Learn Semantic HTML?&lt;/h2&gt;
+      &lt;p&gt;It improves accessibility and SEO.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2025 Noel Codes&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;header style='background:#eee;padding:10px'&gt;
+      &lt;h1&gt;Welcome to Noel Codes&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;nav style='background:#ddd;padding:8px'&gt;
+      &lt;ul style='list-style:none;display:flex;gap:15px;margin:0;padding:0'&gt;
+        &lt;li&gt;&lt;a href='#'&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href='#'&gt;Courses&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;main style='padding:10px'&gt;
+      &lt;section&gt;
+        &lt;article&gt;
+          &lt;h2&gt;Why Learn Semantic HTML?&lt;/h2&gt;
+          &lt;p&gt;It improves accessibility and SEO.&lt;/p&gt;
+        &lt;/article&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer style='background:#eee;padding:10px;text-align:center'&gt;
+      &lt;p&gt;© 2025 Noel Codes&lt;/p&gt;
+    &lt;/footer&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLesson6Complete()">Mark as Complete ✅</button>
+  <p id="complete-msg-6" class="complete-msg"></p>
+</div>
+<script>
+  function markLesson6Complete() {
+    localStorage.setItem('lesson6_html_done', 'true');
+    document.getElementById('complete-msg-6').textContent = '✅ Lesson marked as complete!';
+  }
+
+  window.onload = function () {
+    // existing lesson checks...
+    if (localStorage.getItem('lesson6_html_done')) {
+      document.getElementById('complete-msg-6').textContent = '✅ You completed this lesson!';
+    }
+  };
+</script>
+
+<div class="lesson-box">
+  <h3>Lesson 7: Advanced HTML Forms</h3>
+  <p>In this lesson, you'll learn how to use radio buttons, checkboxes, and dropdown menus to make your forms more powerful and user-friendly.</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Choose Your Favorite Language&lt;/legend&gt;
+
+    &lt;input type=&quot;radio&quot; id=&quot;html&quot; name=&quot;lang&quot; value=&quot;HTML&quot;&gt;
+    &lt;label for=&quot;html&quot;&gt;HTML&lt;/label&gt;&lt;br&gt;
+
+    &lt;input type=&quot;radio&quot; id=&quot;css&quot; name=&quot;lang&quot; value=&quot;CSS&quot;&gt;
+    &lt;label for=&quot;css&quot;&gt;CSS&lt;/label&gt;&lt;br&gt;
+
+    &lt;input type=&quot;radio&quot; id=&quot;js&quot; name=&quot;lang&quot; value=&quot;JS&quot;&gt;
+    &lt;label for=&quot;js&quot;&gt;JavaScript&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;br&gt;
+
+  &lt;label&gt;Select your interests:&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;frontend&quot;&gt;
+  &lt;label for=&quot;frontend&quot;&gt;Frontend&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type=&quot;checkbox&quot; id=&quot;backend&quot;&gt;
+  &lt;label for=&quot;backend&quot;&gt;Backend&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type=&quot;checkbox&quot; id=&quot;uiux&quot;&gt;
+  &lt;label for=&quot;uiux&quot;&gt;UI/UX Design&lt;/label&gt;
+
+  &lt;br&gt;&lt;br&gt;
+
+  &lt;label for=&quot;country&quot;&gt;Select your country:&lt;/label&gt;&lt;br&gt;
+  &lt;select id=&quot;country&quot;&gt;
+    &lt;option&gt;Kenya&lt;/option&gt;
+    &lt;option&gt;USA&lt;/option&gt;
+    &lt;option&gt;Germany&lt;/option&gt;
+    &lt;option&gt;Japan&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;br&gt;&lt;br&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;form&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Choose Your Favorite Language&lt;/legend&gt;
+
+        &lt;input type='radio' id='html' name='lang' value='HTML'&gt;
+        &lt;label for='html'&gt;HTML&lt;/label&gt;&lt;br&gt;
+
+        &lt;input type='radio' id='css' name='lang' value='CSS'&gt;
+        &lt;label for='css'&gt;CSS&lt;/label&gt;&lt;br&gt;
+
+        &lt;input type='radio' id='js' name='lang' value='JS'&gt;
+        &lt;label for='js'&gt;JavaScript&lt;/label&gt;
+      &lt;/fieldset&gt;
+
+      &lt;br&gt;
+
+      &lt;label&gt;Select your interests:&lt;/label&gt;&lt;br&gt;
+      &lt;input type='checkbox' id='frontend'&gt;
+      &lt;label for='frontend'&gt;Frontend&lt;/label&gt;&lt;br&gt;
+
+      &lt;input type='checkbox' id='backend'&gt;
+      &lt;label for='backend'&gt;Backend&lt;/label&gt;&lt;br&gt;
+
+      &lt;input type='checkbox' id='uiux'&gt;
+      &lt;label for='uiux'&gt;UI/UX Design&lt;/label&gt;
+
+      &lt;br&gt;&lt;br&gt;
+
+      &lt;label for='country'&gt;Select your country:&lt;/label&gt;&lt;br&gt;
+      &lt;select id='country'&gt;
+        &lt;option&gt;Kenya&lt;/option&gt;
+        &lt;option&gt;USA&lt;/option&gt;
+        &lt;option&gt;Germany&lt;/option&gt;
+        &lt;option&gt;Japan&lt;/option&gt;
+      &lt;/select&gt;
+
+      &lt;br&gt;&lt;br&gt;
+      &lt;button&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLesson7Complete()">Mark as Complete ✅</button>
+  <p id="complete-msg-7" class="complete-msg"></p>
+</div>
+<script>
+  function markLesson7Complete() {
+    localStorage.setItem('lesson7_html_done', 'true');
+    document.getElementById('complete-msg-7').textContent = '✅ Lesson marked as complete!';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('lesson7_html_done')) {
+      document.getElementById('complete-msg-7').textContent = '✅ You completed this lesson!';
+    }
+  };
+</script>
+
+<div class="lesson-box">
+  <h3>Lesson 8: Media in HTML (Images, Audio, Video)</h3>
+  <p>HTML allows you to add images, music, and videos to your websites. Here's how to do it:</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;!-- Image Example --&gt;
+&lt;img src=&quot;https://via.placeholder.com/150&quot; alt=&quot;Placeholder Image&quot;&gt;
+
+&lt;!-- Audio Example --&gt;
+&lt;audio controls&gt;
+  &lt;source src=&quot;https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Video Example --&gt;
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;
+  &lt;source src=&quot;https://www.w3schools.com/html/mov_bbb.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;img src='https://via.placeholder.com/150' alt='Placeholder Image' style='display:block;margin-bottom:10px'&gt;
+
+    &lt;audio controls style='display:block;margin-bottom:10px'&gt;
+      &lt;source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type='audio/mpeg'&gt;
+      Your browser does not support the audio element.
+    &lt;/audio&gt;
+
+    &lt;video width='320' height='240' controls&gt;
+      &lt;source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'&gt;
+      Your browser does not support the video tag.
+    &lt;/video&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLesson8Complete()">Mark as Complete ✅</button>
+  <p id="complete-msg-8" class="complete-msg"></p>
+</div>
+<script>
+  function markLesson8Complete() {
+    localStorage.setItem('lesson8_html_done', 'true');
+    document.getElementById('complete-msg-8').textContent = '✅ Lesson marked as complete!';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('lesson8_html_done')) {
+      document.getElementById('complete-msg-8').textContent = '✅ You completed this lesson!';
+    }
+  };
+</script>
+
+<div class="lesson-box">
+  <h3>Lesson 9: HTML Tables</h3>
+  <p>Tables are used to organize data into rows and columns. Here's how you use them in HTML:</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;table border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Noel&lt;/td&gt;
+    &lt;td&gt;17&lt;/td&gt;
+    &lt;td&gt;Kenya&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Andy&lt;/td&gt;
+    &lt;td&gt;18&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;table border='1' style='border-collapse: collapse; width: 100%'&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+        &lt;th&gt;Country&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Noel&lt;/td&gt;
+        &lt;td&gt;17&lt;/td&gt;
+        &lt;td&gt;Kenya&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Andy&lt;/td&gt;
+        &lt;td&gt;18&lt;/td&gt;
+        &lt;td&gt;USA&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLessonComplete(9)">Mark as Complete ✅</button>
+  <p id="complete-msg-9" class="complete-msg"></p>
+</div>
+
+<div class="lesson-box">
+  <h3>Lesson 10: Links and Navigation in HTML</h3>
+  <p>Links are used to connect web pages. You can link to other websites or your own pages using the &lt;a&gt; tag.</p>
+
+  <!-- Code Example -->
+  <pre><code>&lt;!-- External Link --&gt;
+&lt;a href=&quot;https://www.google.com&quot; target=&quot;_blank&quot;&gt;Visit Google&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- Internal Link --&gt;
+&lt;a href=&quot;about.html&quot;&gt;Go to About Page&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- Navigation Bar Example --&gt;
+&lt;nav&gt;
+  &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt; |
+  &lt;a href=&quot;courses.html&quot;&gt;Courses&lt;/a&gt; |
+  &lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;a href='https://www.google.com' target='_blank'&gt;Visit Google&lt;/a&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;a href='about.html'&gt;Go to About Page&lt;/a&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;nav style='background:#f2f2f2; padding:10px; border-radius:6px'&gt;
+      &lt;a href='index.html' style='margin-right:10px'&gt;Home&lt;/a&gt;
+      &lt;a href='courses.html' style='margin-right:10px'&gt;Courses&lt;/a&gt;
+      &lt;a href='contact.html'&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLessonComplete(10)">Mark as Complete ✅</button>
+  <p id="complete-msg-10" class="complete-msg"></p>
+</div>
+
+<div class="lesson-box">
+  <h3>Lesson 11: HTML Entities & Special Characters</h3>
+  <p>Sometimes we need to show characters like &lt; or © in our HTML. Here's how:</p>
+
+  <pre><code>&lt;p&gt;&amp;lt;h1&amp;gt;This is a heading&amp;lt;/h1&amp;gt;&lt;/p&gt;
+&lt;p&gt;Copyright &amp;copy; 2025 Noel Codes&lt;/p&gt;
+&lt;p&gt;Registered &amp;reg;&lt;/p&gt;
+&lt;p&gt;Use &amp;amp; to display an ampersand (&amp;)&lt;/p&gt;
+&lt;p&gt;Euro: &amp;euro;&lt;/p&gt;
+&lt;p&gt;Non-breaking space: Hello&amp;nbsp;&amp;nbsp;&amp;nbsp;World&lt;/p&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;p&gt;&lt;h1&gt;This is a heading&lt;/h1&gt;&lt;/p&gt;
+    &lt;p&gt;Copyright &copy; 2025 Noel Codes&lt;/p&gt;
+    &lt;p&gt;Registered &reg;&lt;/p&gt;
+    &lt;p&gt;Use &amp; to display an ampersand (&)&lt;/p&gt;
+    &lt;p&gt;Euro: &euro;&lt;/p&gt;
+    &lt;p&gt;Non-breaking space: Hello&nbsp;&nbsp;&nbsp;World&lt;/p&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLessonComplete(11)">Mark as Complete ✅</button>
+  <p id="complete-msg-11" class="complete-msg"></p>
+</div>
+
+<div class="lesson-box">
+  <h3>Lesson 12: Embedding Content in HTML</h3>
+  <p>You can embed videos, maps, and even full webpages using the &lt;iframe&gt; tag.</p>
+
+  <pre><code>&lt;!-- Embed YouTube Video --&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; 
+src=&quot;https://www.youtube.com/embed/dQw4w9WgXcQ&quot; 
+title=&quot;YouTube video&quot; frameborder=&quot;0&quot; 
+allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;!-- Embed Google Map --&gt;
+&lt;iframe 
+src=&quot;https://www.google.com/maps/embed?pb=!1m18...&quot; 
+width=&quot;560&quot; height=&quot;315&quot; style=&quot;border:0;&quot; 
+allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;iframe width='100%' height='200' src='https://www.youtube.com/embed/dQw4w9WgXcQ' frameborder='0' allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;iframe width='100%' height='200' src='https://www.google.com/maps?q=nairobi,kenya&amp;output=embed' style='border:0;' allowfullscreen loading='lazy'&gt;&lt;/iframe&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLessonComplete(12)">Mark as Complete ✅</button>
+  <p id="complete-msg-12" class="complete-msg"></p>
+</div>
+
+<div class="lesson-box">
+  <h3>Lesson 13: HTML Forms – Inputs, Buttons, Checkboxes</h3>
+  <p>HTML forms allow users to send data to a server. Here are the basics:</p>
+
+  <pre><code>&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; placeholder=&quot;Enter your name&quot; required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Enter your email&quot; required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Choose your gender:&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;
+  &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;
+  &lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot;&gt; Subscribe to newsletter
+  &lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;form&gt;
+      &lt;label for='name'&gt;Name:&lt;/label&gt;&lt;br&gt;
+      &lt;input type='text' id='name' name='name' placeholder='Enter your name' required&gt;&lt;br&gt;&lt;br&gt;
+
+      &lt;label for='email'&gt;Email:&lt;/label&gt;&lt;br&gt;
+      &lt;input type='email' id='email' name='email' placeholder='Enter your email' required&gt;&lt;br&gt;&lt;br&gt;
+
+      &lt;label for='password'&gt;Password:&lt;/label&gt;&lt;br&gt;
+      &lt;input type='password' id='password' name='password' required&gt;&lt;br&gt;&lt;br&gt;
+
+      &lt;label&gt;Choose your gender:&lt;/label&gt;&lt;br&gt;
+      &lt;input type='radio' id='male' name='gender' value='male'&gt;
+      &lt;label for='male'&gt;Male&lt;/label&gt;&lt;br&gt;
+      &lt;input type='radio' id='female' name='gender' value='female'&gt;
+      &lt;label for='female'&gt;Female&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+      &lt;input type='checkbox' name='subscribe'&gt; Subscribe to newsletter&lt;br&gt;&lt;br&gt;
+
+      &lt;button type='submit'&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;">
+  </iframe>
+
+<div class="lesson-box">
+  <h3>Lesson 14: Tables in HTML</h3>
+  <p>Tables are great for showing structured data. Here's a simple example:</p>
+
+  <pre><code>&lt;table border=&quot;1&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Rank&lt;/th&gt;
+      &lt;th&gt;Student Name&lt;/th&gt;
+      &lt;th&gt;Score&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Noel&lt;/td&gt;
+      &lt;td&gt;98%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Andy&lt;/td&gt;
+      &lt;td&gt;95%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Solo&lt;/td&gt;
+      &lt;td&gt;90%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;table border='1' style='width: 100%; text-align: center;'&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Rank&lt;/th&gt;
+          &lt;th&gt;Student Name&lt;/th&gt;
+          &lt;th&gt;Score&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Noel&lt;/td&gt;&lt;td&gt;98%&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Andy&lt;/td&gt;&lt;td&gt;95%&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Solo&lt;/td&gt;&lt;td&gt;90%&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLessonComplete(14)">Mark as Complete ✅</button>
+  <p id="complete-msg-14" class="complete-msg"></p>
+</div>
+
+<div class="lesson-box">
+  <h3>Lesson 15: Semantic HTML Tags</h3>
+  <p>Semantic tags make your HTML easier to read, and better for search engines and screen readers.</p>
+
+  <pre><code>&lt;header&gt;
+  &lt;h1&gt;Noel Codes&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Courses&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Welcome to Noel Codes&lt;/h2&gt;
+    &lt;p&gt;Learn HTML, CSS, JavaScript and become a coding master!&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;article&gt;
+    &lt;h3&gt;Why Learn HTML?&lt;/h3&gt;
+    &lt;p&gt;HTML is the foundation of all websites. It's simple, fun, and powerful.&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;aside&gt;
+    &lt;p&gt;💡 Tip: Practice by building your own portfolio site!&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2025 Noel Codes. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+  <!-- Live Output -->
+  <h4>Output:</h4>
+  <iframe class="code-preview" srcdoc="
+    &lt;header style='background:#222;color:white;padding:10px'&gt;
+      &lt;h1&gt;Noel Codes&lt;/h1&gt;
+      &lt;nav&gt;&lt;a href='#' style='margin-right:10px;color:#0f0'&gt;Home&lt;/a&gt;&lt;a href='#' style='margin-right:10px;color:#0f0'&gt;Courses&lt;/a&gt;&lt;a href='#' style='color:#0f0'&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main style='padding:10px'&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Welcome to Noel Codes&lt;/h2&gt;
+        &lt;p&gt;Learn HTML, CSS, JavaScript and become a coding master!&lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;article&gt;
+        &lt;h3&gt;Why Learn HTML?&lt;/h3&gt;
+        &lt;p&gt;HTML is the foundation of all websites. It's simple, fun, and powerful.&lt;/p&gt;
+      &lt;/article&gt;
+
+      &lt;aside style='background:#f0f0f0;padding:10px;margin-top:10px'&gt;
+        &lt;p&gt;💡 Tip: Practice by building your own portfolio site!&lt;/p&gt;
+      &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer style='background:#222;color:white;text-align:center;padding:10px'&gt;
+      &lt;p&gt;&copy; 2025 Noel Codes. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;">
+  </iframe>
+
+  <!-- Completion Button -->
+  <button class="btn-complete" onclick="markLessonComplete(15)">Mark as Complete ✅</button>
+  <p id="complete-msg-15" class="complete-msg"></p>
+</div>
+</html>

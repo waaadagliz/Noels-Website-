@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make It Responsive – Noel Codes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      color: #222;
+    }
+
+    nav {
+      background-color: #24292e;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .lesson-step {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 6px solid #00b894;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 4px;
+      position: relative;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #00b894;
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .output-box {
+      background: #e8f5e9;
+      padding: 15px;
+      border: 1px solid #a5d6a7;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    .box {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background: #00b894;
+      color: white;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .box {
+        background: #0984e3;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Noel Codes</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="tutorials.html">Tutorials</a></li>
+      <li><a href="apps.html">Noel Apps</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>📱 Make Your Website Responsive</h1>
+    <p>Learn how to adjust your layout for phones and tablets using media queries.</p>
+
+    <div class="lesson-step">
+      <h2>1. What is a Media Query?</h2>
+      <p>A media query checks the screen size and applies different styles:</p>
+      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <pre><code>@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    color: blue;
+  }
+}</code></pre>
+    </div>
+
+    <div class="lesson-step">
+      <h2>2. Example – Responsive Box</h2>
+      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <pre><code>.box {
+  background: green;
+  color: white;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .box {
+    background: blue;
+    font-size: 14px;
+  }
+}</code></pre>
+      <div class="output-box">
+        <div class="box">Resize your screen to see the color change</div>
+      </div>
+    </div>
+
+    <div class="lesson-step">
+      <h2>3. Why It Matters</h2>
+      <p>Most users view websites on phones. Responsive design makes your site easier to read, click, and use on all devices.</p>
+    </div>
+  </div>
+
+  <script>
+    function copyCode(button) {
+      const code = button.nextElementSibling.querySelector('code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        button.innerText = "Copied!";
+        setTimeout(() => button.innerText = "Copy", 2000);
+      });
+    }
+  </script>
+</body>
+</html>

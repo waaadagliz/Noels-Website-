@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add More Pages – Noel Codes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #24292e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 28px;
+    }
+
+    .lesson-step {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 6px solid #007bff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    code, pre {
+      background: #efefef;
+      padding: 10px;
+      display: block;
+      white-space: pre-wrap;
+      border-radius: 4px;
+    }
+
+    .output-box {
+      background: #f0f0f0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Noel Codes</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="tutorials.html">Tutorials</a></li>
+      <li><a href="apps.html">Noel Apps</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>➕ Add More Pages to Your Website</h1>
+
+    <div class="lesson-step">
+      <h2>1. Create New Pages</h2>
+      <p>Create files like <code>about.html</code> and <code>contact.html</code> in your project folder.</p>
+    </div>
+
+    <div class="lesson-step">
+      <h2>2. Add Content to Those Pages</h2>
+      <pre>&lt;!-- about.html --&gt;
+&lt;h1&gt;About Us&lt;/h1&gt;
+&lt;p&gt;Welcome to Noel Codes. This is our about page.&lt;/p&gt;</pre>
+      <div class="output-box">
+        <h1>About Us</h1>
+        <p>Welcome to Noel Codes. This is our about page.</p>
+      </div>
+    </div>
+
+    <div class="lesson-step">
+      <h2>3. Link Pages Using &lt;a&gt; Tags</h2>
+      <pre>&lt;a href="about.html"&gt;Go to About Page&lt;/a&gt;</pre>
+      <div class="output-box">
+        <a href="about.html">Go to About Page</a>
+      </div>
+    </div>
+
+    <div class="lesson-step">
+      <h2>4. Organize Files (Optional)</h2>
+      <p>You can create a <code>pages</code> folder and move your HTML files inside:</p>
+      <pre>pages/
+ ┣ about.html
+ ┣ contact.html
+</pre>
+      <p>Then change links like this:</p>
+      <pre>&lt;a href="pages/about.html"&gt;About&lt;/a&gt;</pre>
+    </div>
+  </div>
+</body>
+</html>

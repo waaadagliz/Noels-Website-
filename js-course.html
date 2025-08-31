@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Course | Noel Codes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1>Noel Codes</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html-course.html">HTML</a></li>
+        <li><a href="css-course.html">CSS</a></li>
+        <li><a href="js-course.html" class="active">JavaScript</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Lesson 1 -->
+    <section class="lesson-box">
+      <h2>JS Lesson 1: Intro & Variables</h2>
+      <p>JavaScript lets you add logic and interactivity to websites. Let’s begin with variables.</p>
+
+      <pre><code>
+// This is a comment
+let name = "Noel";
+let age = 18;
+console.log("My name is " + name + " and I'm " + age + " years old.");
+      </code></pre>
+
+      <button onclick="runLesson1()">Run Code</button>
+      <p id="output1" class="output-box"></p>
+    </section>
+
+    <!-- Lesson 2 -->
+    <section class="lesson-box">
+      <h2>JS Lesson 2: Operators</h2>
+      <p>JavaScript has arithmetic operators like <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code> for performing math operations.</p>
+
+      <pre><code>
+// Arithmetic Operators
+let a = 10;
+let b = 5;
+
+let sum = a + b;
+let diff = a - b;
+let product = a * b;
+let divide = a / b;
+
+let result = "Sum: " + sum + 
+             ", Difference: " + diff +
+             ", Product: " + product + 
+             ", Division: " + divide;
+
+document.getElementById("output2").textContent = result;
+      </code></pre>
+
+      <button onclick="runLesson2()">Run Code</button>
+      <p id="output2" class="output-box"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Noel Codes</p>
+  </footer>
+
+  <!-- JavaScript Code -->
+  <script>
+    function runLesson1() {
+      let name = "Noel";
+      let age = 18;
+      document.getElementById("output1").textContent = "My name is " + name + " and I'm " + age + " years old.";
+    }
+
+    function runLesson2() {
+      let a = 10;
+      let b = 5;
+
+      let sum = a + b;
+      let diff = a - b;
+      let product = a * b;
+      let divide = a / b;
+
+      let result = "Sum: " + sum + 
+                   ", Difference: " + diff + 
+                   ", Product: " + product + 
+                   ", Division: " + divide;
+
+      document.getElementById("output2").textContent = result;
+    }
+  </script>
+  
+  <!-- Lesson 3 -->
+<section class="lesson-box">
+  <h2>JS Lesson 3: Data Types</h2>
+  <p>JavaScript has several data types like:</p>
+  <ul>
+    <li><code>String</code> - text like "Hello"</li>
+    <li><code>Number</code> - numeric values like 42</li>
+    <li><code>Boolean</code> - true or false</li>
+    <li><code>Null</code> - empty value</li>
+    <li><code>Undefined</code> - a variable without a value</li>
+  </ul>
+
+  <pre><code>
+// Data Types Example
+let username = "Noel";         // String
+let age = 18;                  // Number
+let isStudent = true;          // Boolean
+let score = null;              // Null
+let grade;                     // Undefined
+
+let result = 
+  "String: " + username + "\n" +
+  "Number: " + age + "\n" +
+  "Boolean: " + isStudent + "\n" +
+  "Null: " + score + "\n" +
+  "Undefined: " + grade;
+
+document.getElementById("output3").textContent = result;
+  </code></pre>
+
+  <button onclick="runLesson3()">Run Code</button>
+  <p id="output3" class="output-box"></p>
+</section>
+<script>
+  function runLesson3() {
+  let username = "Noel";         // String
+  let age = 18;                  // Number
+  let isStudent = true;          // Boolean
+  let score = null;              // Null
+  let grade;                     // Undefined
+
+  let result = 
+    "String: " + username + "\n" +
+    "Number: " + age + "\n" +
+    "Boolean: " + isStudent + "\n" +
+    "Null: " + score + "\n" +
+    "Undefined: " + grade;
+
+  document.getElementById("output3").textContent = result;
+}
+</script>
+<section class="lesson-box">
+  <h2>Lesson 4: Conditional Statements</h2>
+  <p>JavaScript uses <code>if</code>, <code>else if</code>, and <code>else</code> to perform different actions based on conditions.</p>
+
+  <input type="number" id="js-age" placeholder="Enter your age" />
+  <button onclick="checkAge()">Check Eligibility</button>
+
+  <div id="js-output4" class="output-box"></div>
+
+  <script>
+    function checkAge() {
+      const age = parseInt(document.getElementById("js-age").value);
+      let result = "";
+
+      if (isNaN(age)) {
+        result = "Please enter a valid age.";
+      } else if (age >= 18) {
+        result = "✅ You are eligible to vote!";
+      } else {
+        result = "❌ You must be at least 18 to vote.";
+      }
+
+      document.getElementById("js-output4").innerText = result;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 5: Loops (for, while)</h2>
+  <p>Loops help us repeat actions. Below is an example of both <code>for</code> and <code>while</code> loops printing numbers 1 to 5.</p>
+
+  <button onclick="runLoops()">Run Code</button>
+  <div id="js-output5" class="output-box"></div>
+
+  <script>
+    function runLoops() {
+      let output = "";
+
+      // For loop
+      for (let i = 1; i <= 5; i++) {
+        output += "For Loop: " + i + "<br>";
+      }
+
+      // While loop
+      let j = 1;
+      while (j <= 5) {
+        output += "While Loop: " + j + "<br>";
+        j++;
+      }
+
+      document.getElementById("js-output5").innerHTML = output;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 6: Functions</h2>
+  <p>Functions let us organize code into reusable blocks. Click the button to call a simple function that greets the user.</p>
+
+  <button onclick="greetUser()">Run Function</button>
+  <div id="js-output6" class="output-box"></div>
+
+  <script>
+    function greetUser() {
+      let name = "Noel";
+      let message = "Hello, " + name + "! Welcome to JavaScript.";
+      document.getElementById("js-output6").innerText = message;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 7: Arrays</h2>
+  <p>Arrays are used to store multiple values in a single variable. Click the button to display an array of favorite fruits.</p>
+
+  <button onclick="showFruits()">Show Fruits</button>
+  <div id="js-output7" class="output-box"></div>
+
+  <script>
+    function showFruits() {
+      const fruits = ["🍎 Apple", "🍌 Banana", "🍇 Grape", "🍍 Pineapple"];
+      let result = "My Favorite Fruits:<br>";
+
+      for (let i = 0; i < fruits.length; i++) {
+        result += "- " + fruits[i] + "<br>";
+      }
+
+      document.getElementById("js-output7").innerHTML = result;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 8: Objects</h2>
+  <p>Objects store data in key–value pairs. Click the button to see details of a user object.</p>
+
+  <button onclick="showUser()">Show User</button>
+  <div id="js-output8" class="output-box"></div>
+
+  <script>
+    function showUser() {
+      const user = {
+        name: "Noel",
+        age: 18,
+        course: "JavaScript",
+        isEnrolled: true
+      };
+
+      let output = `
+        Name: ${user.name} <br>
+        Age: ${user.age} <br>
+        Course: ${user.course} <br>
+        Enrolled: ${user.isEnrolled ? "Yes" : "No"}
+      `;
+
+      document.getElementById("js-output8").innerHTML = output;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 9: Events</h2>
+  <p>Events allow JavaScript to react to user actions like clicks, hovers, typing, etc. Click the box below to trigger an event!</p>
+
+  <div 
+    onclick="boxClicked()" 
+    style="width: 200px; height: 100px; background: lightblue; text-align: center; line-height: 100px; cursor: pointer;">
+    Click Me
+  </div>
+
+  <div id="js-output9" class="output-box"></div>
+
+  <script>
+    function boxClicked() {
+      document.getElementById("js-output9").innerText = "✅ You clicked the box!";
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 10: DOM Manipulation</h2>
+  <p>DOM (Document Object Model) manipulation allows JavaScript to change HTML content, style, or structure.</p>
+
+  <p id="domText">This text will be changed by JavaScript.</p>
+  <button onclick="changeText()">Change Text</button>
+
+  <div id="js-output10" class="output-box"></div>
+
+  <script>
+    function changeText() {
+      document.getElementById("domText").innerText = "✅ The text has been changed!";
+      document.getElementById("js-output10").innerText = "DOM successfully manipulated!";
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 11: Events with Inputs</h2>
+  <p>JavaScript can read and respond to user input. Enter your name below and click the button to see what happens!</p>
+
+  <input type="text" id="usernameInput" placeholder="Enter your name" />
+  <button onclick="greetInputUser()">Greet Me</button>
+
+  <div id="js-output11" class="output-box"></div>
+
+  <script>
+    function greetInputUser() {
+      const name = document.getElementById("usernameInput").value;
+      const message = name 
+        ? `Hello, ${name}! 👋` 
+        : "Please enter your name first.";
+      document.getElementById("js-output11").innerText = message;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 12: Math & Random Numbers</h2>
+  <p>JavaScript has built-in math functions. Click the button to generate a random number between 1 and 100.</p>
+
+  <button onclick="generateRandom()">Generate Random Number</button>
+
+  <div id="js-output12" class="output-box"></div>
+
+  <script>
+    function generateRandom() {
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("js-output12").innerText = 
+        `🎲 Your random number is: ${randomNumber}`;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 13: setTimeout & setInterval</h2>
+  <p><code>setTimeout()</code> runs code once after a delay. <code>setInterval()</code> runs it repeatedly at intervals.</p>
+
+  <button onclick="showTimeout()">Run setTimeout</button>
+  <button onclick="startInterval()">Start setInterval</button>
+  <button onclick="stopInterval()">Stop Interval</button>
+
+  <div id="js-output13" class="output-box"></div>
+
+  <script>
+    let intervalId;
+
+    function showTimeout() {
+      document.getElementById("js-output13").innerText = "⏳ Waiting 2 seconds...";
+      setTimeout(() => {
+        document.getElementById("js-output13").innerText = "✅ 2 seconds passed!";
+      }, 2000);
+    }
+
+    function startInterval() {
+      let count = 0;
+      intervalId = setInterval(() => {
+        count++;
+        document.getElementById("js-output13").innerText = `🔁 Interval running... ${count}`;
+      }, 1000);
+    }
+
+    function stopInterval() {
+      clearInterval(intervalId);
+      document.getElementById("js-output13").innerText = "🛑 Interval stopped.";
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 14: Array Methods</h2>
+  <p>JavaScript arrays have helpful methods like <code>push()</code>, <code>pop()</code>, and <code>join()</code>. Click the button to see how they work.</p>
+
+  <button onclick="showArrayMethods()">Run Array Methods</button>
+  <div id="js-output14" class="output-box"></div>
+
+  <script>
+    function showArrayMethods() {
+      let colors = ["Red", "Green", "Blue"];
+      let result = "";
+
+      result += `Original array: ${colors.join(", ")}<br>`;
+      
+      colors.push("Yellow");
+      result += `After push("Yellow"): ${colors.join(", ")}<br>`;
+
+      colors.pop();
+      result += `After pop(): ${colors.join(", ")}<br>`;
+
+      result += `Joined string: ${colors.join(" | ")}`;
+
+      document.getElementById("js-output14").innerHTML = result;
+    }
+  </script>
+</section>
+<section class="lesson-box">
+  <h2>Lesson 15: Mini Project – Simple Calculator</h2>
+  <p>This simple calculator adds two numbers using what we've learned: inputs, functions, and DOM manipulation.</p>
+
+  <input type="number" id="num1" placeholder="Enter number 1" />
+  <input type="number" id="num2" placeholder="Enter number 2" />
+  <button onclick="calculateSum()">Add</button>
+
+  <div id="js-output15" class="output-box"></div>
+
+  <script>
+    function calculateSum() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("js-output15").innerText = "❌ Please enter valid numbers.";
+        return;
+      }
+
+      const sum = n1 + n2;
+      document.getElementById("js-output15").innerText = `✅ Result: ${sum}`;
+    }
+  </script>
+</section>
+</body>
+</html>

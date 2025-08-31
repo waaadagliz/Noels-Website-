@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Navigation Bar Tutorial – Noel Codes</title>
+  <style>
+    /* 🌐 Global Reset and Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* 🔝 Top Navigation */
+    nav {
+      background-color: #0f172a;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      gap: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #4ade80;
+    }
+
+    /* 🧱 Main Container */
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* 💻 Code Styling */
+    .code-box {
+      background: #f8fafc;
+      padding: 1rem;
+      border-left: 5px solid #4ade80;
+      font-family: monospace;
+      overflow-x: auto;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+
+    /* 🧪 Interactive Code Area */
+    .interactive {
+      margin: 2rem 0;
+    }
+
+    textarea {
+      width: 100%;
+      height: 180px;
+      font-family: monospace;
+      font-size: 15px;
+      padding: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      resize: vertical;
+      background: #f9fafb;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #4ade80;
+      border: none;
+      border-radius: 6px;
+      color: #0f172a;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #22c55e;
+    }
+
+    .output {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px dashed #94a3b8;
+      background-color: #ffffff;
+      border-radius: 8px;
+      min-height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About</a>
+    <a href="tutorials.html" class="active">Tutorials</a>
+  </nav>
+
+  <div class="container">
+    <h1>🌐 How to Create a Navigation Bar</h1>
+    <p>In this tutorial, you'll learn how to build a simple navigation bar using HTML and CSS — the foundation of every website!</p>
+
+    <h2>📄 Step 1: HTML</h2>
+    <div class="code-box">
+<pre><code>&lt;nav class="navbar"&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;a href="#"&gt;Courses&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+
+    <h2>🎨 Step 2: CSS</h2>
+    <div class="code-box">
+<pre><code>.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}</code></pre>
+    </div>
+
+    <h2>🚀 Try It Yourself</h2>
+    <div class="interactive">
+      <textarea id="code">
+&lt;nav style="background:#333; padding:10px; display:flex; gap:20px;"&gt;
+  &lt;a href="#" style="color:white; text-decoration:none;"&gt;Home&lt;/a&gt;
+  &lt;a href="#" style="color:white; text-decoration:none;"&gt;About&lt;/a&gt;
+  &lt;a href="#" style="color:white; text-decoration:none;"&gt;Courses&lt;/a&gt;
+  &lt;a href="#" style="color:white; text-decoration:none;"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+      </textarea>
+      <button onclick="runCode()">Run Code</button>
+      <div class="output" id="outputBox">👈 Your code output will appear here.</div>
+    </div>
+
+    <h2>✅ Conclusion</h2>
+    <p>Congratulations! You've now built a basic navigation bar. You can customize it with colors, spacing, and responsiveness using CSS.</p>
+  </div>
+
+  <script>
+    function runCode() {
+      const userCode = document.getElementById("code").value;
+      document.getElementById("outputBox").innerHTML = userCode;
+    }
+  </script>
+</body>
+</html>

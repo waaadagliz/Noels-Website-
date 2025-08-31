@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build Your First Website - Noel Codes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: #24292e;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 100px 20px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .step {
+      margin-bottom: 40px;
+    }
+
+    .code-container {
+      position: relative;
+      background: #2d2d2d;
+      color: #f8f8f2;
+      border-radius: 6px;
+      padding: 10px;
+      margin-top: 10px;
+      overflow-x: auto;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background-color: #0056b3;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">Noel Codes</a></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="apps.html">Noel Apps</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>🚀 Build Your First Website</h1>
+    <p>Follow these steps to create your first professional website from scratch using HTML, CSS, and JavaScript.</p>
+
+    <div class="step">
+      <h2>1. Create Your Project Folder</h2>
+      <p>Make a folder on your desktop called <strong>my-website</strong>. Inside it, create three files:</p>
+      <ul>
+        <li><code>index.html</code></li>
+        <li><code>style.css</code></li>
+        <li><code>script.js</code></li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>2. Add HTML Structure</h2>
+      <p>Open <code>index.html</code> and add this starter code:</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy Code</button>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My First Website&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;p&gt;This is a simple page built by me!&lt;/p&gt;
+
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>3. Style with CSS</h2>
+      <p>Now open <code>style.css</code> and add the following:</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy Code</button>
+<pre><code>body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  color: #007bff;
+}
+
+p {
+  color: #333;
+}
+</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>4. Add JavaScript</h2>
+      <p>Now open <code>script.js</code> and add this:</p>
+      <div class="code-container">
+        <button class="copy-btn">Copy Code</button>
+<pre><code>console.log("Website loaded!");
+</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>🎉 You Did It!</h2>
+      <p>Now right-click your <code>index.html</code> file and open it in your browser. You should see your first webpage!</p>
+    </div>
+  </main>
+
+  <script>
+    // Copy button functionality
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const code = btn.nextElementSibling.innerText;
+        navigator.clipboard.writeText(code);
+        btn.textContent = "Copied!";
+        setTimeout(() => btn.textContent = "Copy Code", 1500);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator | Noel Apps</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      background-color: #1e293b;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin: 2rem 0 1rem;
+      color: #1f2937;
+    }
+
+    .bmi-container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    .bmi-container label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 500;
+    }
+
+    .bmi-container input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .bmi-container button {
+      width: 100%;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .bmi-container button:hover {
+      background-color: #2563eb;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Noel Codes</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="tutorials.html">Tutorials</a></li>
+      <li><a href="apps.html">Noel Apps</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <h1>💪 BMI Calculator</h1>
+
+  <div class="bmi-container">
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="e.g., 60" />
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="e.g., 170" />
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div class="result" id="bmiResult">Enter your details to see the result.</div>
+  </div>
+
+  <script>
+    function calculateBMI() {
+      const weight = parseFloat(document.getElementById('weight').value);
+      const height = parseFloat(document.getElementById('height').value) / 100;
+
+      const resultBox = document.getElementById('bmiResult');
+
+      if (!weight || !height) {
+        resultBox.textContent = "Please enter both weight and height!";
+        resultBox.style.color = "red";
+        return;
+      }
+
+      const bmi = weight / (height * height);
+      let status = '';
+
+      if (bmi < 18.5) status = "Underweight";
+      else if (bmi < 24.9) status = "Normal";
+      else if (bmi < 29.9) status = "Overweight";
+      else status = "Obese";
+
+      resultBox.style.color = "#1e40af";
+      resultBox.textContent = `Your BMI is ${bmi.toFixed(1)} (${status})`;
+    }
+  </script>
+
+</body>
+</html>
